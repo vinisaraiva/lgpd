@@ -50,8 +50,8 @@ def analyze_text_with_gpt(text):
             model="gpt-4o-mini",
             messages=[{"role": "system", "content": "Você é um especialista em conformidade com a LGPD."},
                       {"role": "user", "content": prompt}],
-            api_key=OPENAI_API_KEY
         )
+        
         return response["choices"][0]["message"]["content"]
     except Exception as e:
         return f"Erro na análise: {e}"
