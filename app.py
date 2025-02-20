@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+import os
 from openai import OpenAI
 
 # Configurar a API da OpenAI (substitua pela sua chave)
