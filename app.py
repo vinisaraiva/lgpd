@@ -46,7 +46,7 @@ def analyze_text_with_gpt(text):
 
     try:
         #response = client.ChatCompletion.create(
-         response = client.chat.completions.create(
+        response = client.chat.completions.create(
             model="gpt-4o-mini",
             messages=[{"role": "system", "content": "Você é um especialista em conformidade com a LGPD."},
                       {"role": "user", "content": prompt}],
