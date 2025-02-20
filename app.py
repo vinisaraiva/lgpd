@@ -11,7 +11,7 @@ client = OpenAI(
 )
 
 # Configuração inicial da página
-st.set_page_config(page_title=t("Análise aviso LGPD"), page_icon=":bar_chart:", layout="wide")
+st.set_page_config(page_title=("Análise aviso LGPD"), page_icon=":bar_chart:", layout="wide")
 
 
 
