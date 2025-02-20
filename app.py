@@ -3,17 +3,22 @@ import requests
 import os
 from openai import OpenAI
 
+# Configuração inicial da página
+st.set_page_config(page_title=("Análise aviso LGPD"), page_icon=":bar_chart:", layout="wide")
+
+st.markdown(mystyle, unsafe_allow_html=True)
+st.markdown(
+    """<style>.reportview-container {margin-top: -2em;} #MainMenu {visibility: hidden;} .stDeployButton {display:none;} footer {visibility: hidden;}  </style>""",
+    unsafe_allow_html=True
+)
+
+
 # Configurar a API da OpenAI (substitua pela sua chave)
 # OPENAI_API_KEY = "SUA_CHAVE_API_AQUI"
 
 client = OpenAI(
     api_key=os.environ.get("OPENAI_API_KEY"),
 )
-
-# Configuração inicial da página
-st.set_page_config(page_title=("Análise aviso LGPD"), page_icon=":bar_chart:", layout="wide")
-
-
 
 def get_text_from_url(url):
     """Tenta obter o conteúdo da política de privacidade de um site"""
