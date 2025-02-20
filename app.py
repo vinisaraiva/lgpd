@@ -52,7 +52,7 @@ def analyze_text_with_gpt(text):
                       {"role": "user", "content": prompt}],
         )
         
-        return response["choices"][0]["message"]["content"]
+        return response.choices[0].message.content
     except Exception as e:
         return f"Erro na análise: {e}"
 
