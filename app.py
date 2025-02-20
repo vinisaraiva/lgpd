@@ -45,7 +45,7 @@ def analyze_text_with_gpt(text):
     """
 
     try:
-        response = openai.ChatCompletion.create(
+        response = client.ChatCompletion.create(
             model="gpt-4",
             messages=[{"role": "system", "content": "Você é um especialista em conformidade com a LGPD."},
                       {"role": "user", "content": prompt}],
