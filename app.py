@@ -6,6 +6,13 @@ from openai import OpenAI
 # Configuração inicial da página
 st.set_page_config(page_title=("Análise aviso LGPD"), page_icon=":bar_chart:", layout="wide")
 
+mystyle = '''
+    <style>
+        p {
+            text-align: justify;
+        }
+    </style>
+    '''
 st.markdown(mystyle, unsafe_allow_html=True)
 st.markdown(
     """<style>.reportview-container {margin-top: -2em;} #MainMenu {visibility: hidden;} .stDeployButton {display:none;} footer {visibility: hidden;}  </style>""",
